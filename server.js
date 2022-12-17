@@ -39,7 +39,7 @@ app.get('/feedbacks', async (req, res) => {
     console.log('Random feedback is:', feedbackListRandom());
 
     res.status(200);
-    res.json(result);
+    res.json({feedback: feedbackListRandom()});
   } catch (error) {
     console.error(error);
   }
