@@ -49,6 +49,8 @@ app.post('/addFeedback', async (req, res) => {
   try {
     const body = req.body;
     const newFeedback = 'this is a new feedback coming from POST request!!';
+    const newFeedbackFromDemo = 'this is a new feedback coming from the DEMO!!';
+
 
     const params = {
       TableName: 'EmployeeFeedbackList',
