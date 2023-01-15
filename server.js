@@ -58,7 +58,7 @@ app.post('/addFeedback', async (req, res) => {
       },
       UpdateExpression: 'set FeedbackList[20] = :r',
       ExpressionAttributeValues: {
-        ':r': newFeedback,
+        ':r': body,
       },
     };
     await ddbDocumentClient.update(params).promise();
