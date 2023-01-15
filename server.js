@@ -48,8 +48,7 @@ app.get('/feedbacks', async (req, res) => {
 app.post('/addFeedback', async (req, res) => {
   try {
     const body = req.body;
-    // const newFeedback = 'this is a new feedback coming from POST request!!';
-    const newFeedbackFromDemo = 'this is a new feedback coming from the DEMO!!';
+    const newFeedback = 'this is a new feedback coming from THE DEMO DAY!';
 
 
     const params = {
@@ -59,7 +58,7 @@ app.post('/addFeedback', async (req, res) => {
       },
       UpdateExpression: 'set FeedbackList[20] = :r',
       ExpressionAttributeValues: {
-        ':r': newFeedbackFromDemo,
+        ':r': newFeedback,
       },
     };
     await ddbDocumentClient.update(params).promise();
